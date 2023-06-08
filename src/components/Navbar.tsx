@@ -20,7 +20,7 @@ const Navbar = () => {
           setActive('hero');
           smoothScroll('hero')
         }}>
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain animate__animated animate__fadeInLeft' />
+          <img src={logo} alt='logo' className='w-12 h-12 object-contain animate__animated animate__fadeInLeft' />
           <p className='text-white text-[18px] font-bold cursor-pointer animate__fadeInLeft animate__animated animate__delay-1s flex'>Majid &nbsp;
             <span className='sm:block hidden '>| &nbsp; Software Engineer</span>
           </p>
