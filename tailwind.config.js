@@ -1,6 +1,7 @@
-import { Config } from 'tailwindcss';
 
-const config: Config = {
+
+/** @type {import('tailwindcss').Config} */
+export default {
   content: ["./src/**/*.{ts,tsx}"],
   mode: "jit",
   theme: {
@@ -25,6 +26,6 @@ const config: Config = {
     },
   },
   plugins: [],
-};
+}
 
-export default config;
+

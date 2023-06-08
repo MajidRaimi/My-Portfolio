@@ -1,5 +1,7 @@
+import { activeType } from "../components/Navbar";
+
 interface NavLinkProps {
-    id: string;
+    id: activeType;
     title: string;
 }
 
