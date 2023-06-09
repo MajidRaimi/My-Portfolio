@@ -13,7 +13,7 @@ const Computers = () => {
       // Define your own breakpoints here to match Tailwind's.
       if (window.innerWidth < 640) {
         setScale(0.5);
-      }  else {
+      } else {
         setScale(0.75);
       }
     };

@@ -2,7 +2,7 @@ import {
     web, mobile, backend, creator
 } from '../assets';
 
-interface servicesProps {
+export interface servicesProps {
     title: string;
     icon: string;
 }
@@ -15,7 +15,7 @@ const services: servicesProps[] = [
         icon: web,
     },
     {
-        title: "React Native Developer",
+        title: "App Developer",
         icon: mobile,
     },
     {
@@ -23,7 +23,7 @@ const services: servicesProps[] = [
         icon: backend,
     },
     {
-        title: "Content Creator",
+        title: "ML&DL Developer",
         icon: creator,
     },
 ];
