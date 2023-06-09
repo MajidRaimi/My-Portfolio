@@ -2,7 +2,7 @@ import {
     starbucks, tesla, shopify, meta
 } from '../assets';
 
-interface experiencesProps {
+export interface experiencesProps {
     title: string;
     company_name: string;
     icon: string;
