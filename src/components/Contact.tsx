@@ -6,6 +6,7 @@ import { EarthCanvas } from '.';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../animations';
 
+import { toast } from 'react-toastify';
 
 interface FormProps {
   name: string;
@@ -13,7 +14,9 @@ interface FormProps {
   message: string;
 }
 
-const Contact = () => {
+// eslint-disable-next-line react-refresh/only-export-components
+const Contact: React.FC = () => {
+
 
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -23,17 +26,57 @@ const Contact = () => {
     message: ''
   })
 
-  const [isLoading, setisLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
     e.preventDefault();
-    console.log(e.target.name, e.target.value)
+
+    const { name, value } = e.target;
+
+    setForm({
+      ...form,
+      [name]: value
+    })
+
+    console.log(form)
   }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('submit')
+
+    setIsLoading(true);
+
+    emailjs.send(
+      process.env.REACT_APP_SERVICE_ID as string,
+      process.env.REACT_APP_TEMPLATE_ID as string,
+      {
+        from_name: form.name,
+        to_name: 'Majid',
+        from_email: form.email,
+        to_email: 'majidsraimi@gmail.com',
+        message: `
+          Hello Majid 👋,
+          I'm ${form.name} and I want contacting you from ${form.email} and I just want to say:
+          ${form.message}
+
+          Thanks,
+        `
+      },
+      process.env.REACT_APP_PUBLIC_KEY as string
+    ).then(() => {
+      setIsLoading(false);
+      setForm({
+        name: '',
+        email: '',
+        message: ''
+      });
+      toast.dark('Your message has been sent successfully!');
+    }).catch(() => {
+      setIsLoading(false);
+      toast.error('Something went wrong, please try again later!');
+    })
+
   }
 
   return (
@@ -59,6 +102,7 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="What's your name"
               className='bg-tertiary py-4 px-6 placeholder-secondary text-white rounded-lg outline-none border-none font-medium'
+              required
             />
           </label>
           <label className='flex flex-col'>
@@ -70,6 +114,7 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="What's your email"
               className='bg-tertiary py-4 px-6 placeholder-secondary text-white rounded-lg outline-none border-none font-medium'
+              required
             />
           </label>
           <label className='flex flex-col'>
@@ -81,6 +126,7 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="What do you want to say?"
               className='bg-tertiary py-4 px-6 placeholder-secondary text-white rounded-lg outline-none border-none font-medium resize-none	'
+              required
             />
           </label>
           <button className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl'>

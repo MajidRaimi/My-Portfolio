@@ -5,7 +5,6 @@ import { Points as PointsType } from 'three';
 
 import * as random from 'maath/random/dist/maath-random.cjs';
 
-import { Mesh } from "three";
 
 interface StarsProps {
   [x: string]: any;
@@ -18,7 +17,7 @@ const Stars: React.FC<StarsProps> = (props) => {
     return new Float32Array(sphereData.buffer);
   });
 
-  useFrame((state, delta) => {
+  useFrame((_ , delta) => {
     if (ref && ref.current) {
       ref.current.rotation.x -= delta / 10;
       ref.current.rotation.y -= delta / 15;
