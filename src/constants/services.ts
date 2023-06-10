@@ -11,19 +11,19 @@ export interface servicesProps {
 
 const services: servicesProps[] = [
     {
-        title: "Web Developer",
+        title: "Web\nDeveloper",
         icon: web,
     },
     {
-        title: "App Developer",
+        title: "App\nDeveloper",
         icon: mobile,
     },
     {
-        title: "Backend Developer",
+        title: "Backend\nDeveloper",
         icon: backend,
     },
     {
-        title: "ML&DL Developer",
+        title: "ML/DL\nDeveloper",
         icon: creator,
     },
 ];

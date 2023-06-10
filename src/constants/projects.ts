@@ -2,7 +2,7 @@ import {
     carrent, jobit, tripguide
 } from '../assets';
 
-interface projectsProps {
+export interface projectsProps {
     name: string;
     description: string;
     tags: {

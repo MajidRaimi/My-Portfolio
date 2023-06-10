@@ -10,7 +10,7 @@ const Tech = () => {
     <div className='flex flex-row flex-wrap justify-center gap-10 items-center text-center'>
       {
         technologies.map((tech, index) => (
-          <motion.div key={tech.name} className='w-28 h-28 mx-auto' variants={fadeIn('right', '', 1, index*0.05)}>
+          <motion.div key={tech.name} className='w-28 h-28 mx-auto' variants={fadeIn('right', '', index*0.05, 1)}>
             <BallCanvas icon={tech.icon} />
           </motion.div>
         ))

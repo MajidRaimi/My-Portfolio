@@ -36,7 +36,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px]  flex justify-evenly items-center flex-col'
           >
             <img src={icon} alt="" className='w-16 h-16 object-contain' />
-            <h3 className='text-white text-[20px] text-center cursor-default'>{title}</h3>
+            <h3 className='text-white text-[20px] text-center cursor-default'>{title.split('\n')[0]}<br/> {title.split('\n')[1]}</h3>
           </div>
         </motion.div>
 
