@@ -23,7 +23,7 @@ const services: servicesProps[] = [
         icon: backend,
     },
     {
-        title: "ML/DL\nDeveloper",
+        title: "ML / DL\nDeveloper",
         icon: creator,
     },
 ];

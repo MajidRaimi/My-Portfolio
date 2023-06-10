@@ -1,5 +1,5 @@
 import {
-    carrent, jobit, tripguide
+     jobit, tripguide, real_time_messenger
 } from '../assets';
 
 export interface projectsProps {
@@ -32,7 +32,7 @@ const projects: projectsProps[] = [
                 color: "pink-text-gradient",
             },
         ],
-        image: carrent,
+        image: real_time_messenger,
         source_code_link: "https://github.com/",
     },
     {

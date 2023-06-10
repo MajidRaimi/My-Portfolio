@@ -14,7 +14,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState<boolean>(false);
 
   return (
-    <nav className='sm:px-16 px-6 w-full flex items-center py-5 fixed z-20 top-0 bg-primary'>
+    <nav className='sm:px-16 px-6 w-full flex items-center py-5 fixed z-20 top-0  '>
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link to='/' className='flex items-center gap-2' onClick={() => {
           setActive('hero');

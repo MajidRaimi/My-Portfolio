@@ -1,4 +1,4 @@
-interface TestimonialProps {
+export interface TestimonialProps {
     testimonial: string;
     name: string;
     designation: string;

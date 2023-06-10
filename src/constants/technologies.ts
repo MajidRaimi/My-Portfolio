@@ -1,5 +1,5 @@
 import {
-    html, css, javascript, typescript, reactjs, redux, tailwind, nodejs, mongodb, threejs, git, figma, docker
+    flutter, nextjs, githubtech, typescript, reactjs, redux, tailwind, nodejs, mongodb, threejs, git, figma, docker
 } from '../assets';
 
 interface technologiesProps {
@@ -10,32 +10,28 @@ interface technologiesProps {
 
 const technologies: technologiesProps[] = [
     {
-        name: "HTML 5",
-        icon: html,
-    },
-    {
-        name: "CSS 3",
-        icon: css,
-    },
-    {
-        name: "JavaScript",
-        icon: javascript,
+        name: "flutter",
+        icon: flutter,
     },
     {
         name: "TypeScript",
         icon: typescript,
     },
     {
+        name: "Tailwind CSS",
+        icon: tailwind,
+    },
+    {
         name: "React JS",
         icon: reactjs,
     },
     {
-        name: "Redux Toolkit",
-        icon: redux,
+        name: "Next.js",
+        icon: nextjs,
     },
     {
-        name: "Tailwind CSS",
-        icon: tailwind,
+        name: "Redux Toolkit",
+        icon: redux,
     },
     {
         name: "Node JS",
@@ -50,12 +46,16 @@ const technologies: technologiesProps[] = [
         icon: threejs,
     },
     {
+        name: "figma",
+        icon: figma,
+    },
+    {
         name: "git",
         icon: git,
     },
     {
-        name: "figma",
-        icon: figma,
+        name: "github",
+        icon: githubtech,
     },
     {
         name: "docker",

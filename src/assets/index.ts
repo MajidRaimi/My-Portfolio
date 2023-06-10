@@ -20,15 +20,19 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import flutter from './tech/flutter.png';
+import tensorflow from './tech/tensorflow.png';
+import nextjs from './tech/nextjs.png';
+import githubtech from './tech/github.png';
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import shamah from './company/shamah.png';
+import natheel from './company/natheel.webp';
+import mayaseen from './company/mayaseen.png';
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import real_time_messenger from "./real-time-clone.png";
 
 export {
   logo,
@@ -52,11 +56,15 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
   carrent,
   jobit,
   tripguide,
+  shamah,
+  natheel,
+  mayaseen,
+  flutter,
+  tensorflow,
+  nextjs,
+  githubtech,
+  real_time_messenger
 };
